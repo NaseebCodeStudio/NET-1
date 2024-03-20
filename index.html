@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="NCS.png" type="image/x-icon">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      background: #e3edf7;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      border: 2px solid red;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+      background-image: url(NCS.png);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .drop {
+      margin: 50px auto;
+      max-width: 600px;
+    }
+
+    .drop li {
+      list-style: none;
+      width: 100%;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #e3edf7;
+      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+    }
+
+    .drop li label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    label::before {
+      content: "+";
+      margin-right: 10px;
+      font-size: 24px;
+      font-weight: bolder;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .drop .content {
+      text-align: justify;
+      color: #555;
+      padding: 0 10px;
+      line-height: 26px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s, padding 0.5s;
+    }
+
+    .drop input[type="radio"]:checked+label+.content {
+      max-height: 400px;
+      padding: 10px 10px 20px;
+      overflow: auto;
+    }
+
+    .drop input[type="radio"]:checked+label::before {
+      content: "-";
+    }
+
+    @media (max-width: 360px) {
+      .drop {
+        margin: 50px auto;
+        max-width: 360px;
+      }
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NaseebCodeStudio</title>
+</head>
+
+<body>
+  <!-- icon right  -->
+  <a href="https://www.youtube.com/@NaseebCodeStudio" target="_blank">
+    <div class="icon"></div>
+  </a>
+  <!-- ==================first drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="first1" />
+      <label for="first1">Introduction to Computer Networks</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          <a href="net.pdf" download="">Download Internet Course Outline</a>
+          <br>
+          - In simple terms, a <b>computer network</b> is like a digital highway that allows computers and other devices
+          to <b>communicate and share information</b> with each other. Just as cars on a highway can travel from one
+          place to another, <b>data packets</b> in a computer network can move between devices, such as computers,
+          smartphones, printers, and servers.
+          <br>
+          - Computer networks can be as <b>small as a home network</b> connecting a few devices or <b>as large as the
+            internet,</b> which connects billions of devices worldwide. These <b>networks use various technologies,</b>
+          such as cables, Wi-Fi, and cellular networks, to transmit data.
+          <br>
+          - In a network, each device is <b>assigned a unique address</b> called an IP address, similar to how <b>each
+            house on a street has a unique address.</b> Devices use these addresses to send and receive data to and from
+          other devices on the network.
+          <br>
+          - Computer networks enable a <b>wide range of activities,</b> including accessing the internet, sharing files
+          and resources, sending emails, streaming videos, and playing online games. They play a vital role in modern
+          communication and are essential for businesses, schools, governments, and individuals alike.
+          <!-- --p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================first drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="first" />
+      <label for="first">Types of Network</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          <b>Personal Area Network (PAN):</b>
+          A PAN is like a network that revolves around an <b>individual person.</b> It includes devices like
+          <b>smartphones, tablets, laptops, and wearable gadgets</b> that a person uses <b>personally</b>. PANs often
+          use <b>short-range</b> wireless technologies like Bluetooth to connect devices within a few meters of each
+          other.
+          <br>
+          <hr>
+          <b>Local Area Network (LAN):</b>
+
+          A LAN is like a small <b>neighborhood</b> where all the houses are close together. In a LAN, devices like
+          computers, printers, and smartphones <b>are connected within a limited area,</b> such as a home, office, or
+          school. People use LANs to share files, printers, and internet connections among devices in the same location.
+          <br>
+          <hr>
+          <b>Wireless Local Area Network (WLAN):</b>
+
+          A WLAN is <b>similar</b> to a LAN, but <b>instead</b> of using cables to connect devices, <b>it uses
+            wireless</b> technology like Wi-Fi. Devices in a WLAN can connect to the network <b>without needing</b>
+          physical cables, allowing people to access the internet and share resources wirelessly within a limited area
+          like a coffee shop, airport, or home.
+          <br>
+          <hr>
+          <b>Metropolitan Area Network (MAN):</b>
+
+          A MAN is like a network that <b>covers an entire city</b> or metropolitan area. It connects <b>multiple
+            LANs</b> and other networks within the same geographic area, <b>allowing organizations and businesses</b> to
+          communicate and share resources across <b>different locations</b> in the city.
+          <br>
+          <hr>
+          <b>Wide Area Network (WAN):</b>
+
+          A WAN is like a network that connects different <b>neighborhoods or even cities.</b> It covers a <b>larger
+            geographic</b> area and connects LANs & MANs located in different places. <b>WANs use technologies</b> like
+          telephone lines, fiber optics, and satellites to connect devices over long distances. The <b>internet is the
+            largest WAN,</b> connecting people and devices worldwide.
+          <!-- --p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <!-- ==================second drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="second" />
+      <label for="second">Network Topologies</label>
+      <div class="content">
+        <p>
+          <!-- -- p --  -->
+          <b>Bus Topology:</b>
+
+          Imagine a long road where <b>all the houses are connected</b> to a single wire, like houses connected along a
+          single road. <b>In a bus topology,</b> all devices are connected to a central cable called a bus. <b>Data
+            travels along this cable, </b> and each device listens to the data passing by. If a device wants to
+          communicate, it sends a message along the bus, and all devices receive it. While simple, if the main cable
+          fails, the whole network can go down. <br>
+          <hr>
+          <br>
+          <b>Star Topology:</b>
+
+          Picture a central hub with roads leading to different houses. In a star topology, <b>all devices are connected
+            to a central device,</b> usually a switch or hub, like houses connected to a central community center.
+          <b>Devices communicate through this central hub.</b> If one device wants to send data to another, <b>it sends
+            it through the hub,</b> which then forwards it to the intended recipient. This topology offers better
+          reliability and easier troubleshooting because if one connection fails, it <b>doesn't affect</b> the rest of
+          the network.
+          <hr>
+          <br>
+          <b> Ring Topology:</b>
+
+          Visualize a <b>circular</b> path where each house is connected to the house next to it, forming a ring. In a
+          ring topology, each device is connected to two others, creating a continuous loop of connections. <b>Data
+            travels around the ring in one direction.</b> When a device receives data, it reads it and passes it along
+          to the next device until it reaches the intended recipient. While this topology is efficient, if one
+          connection fails, <b>the entire network can be disrupted.</b>
+          <hr>
+          <br>
+          <b>Mesh Topology:</b>
+
+          Think of a neighborhood where every house has multiple roads leading to other houses, <b>creating multiple
+            paths to reach any destination.</b> In a mesh topology, <b>each device is connected to every other
+            device</b> in the network, forming a web-like structure. <b>Data can take multiple paths</b> to reach its
+          destination, making the network highly resilient. <b>If one connection fails, data can still reach</b> its
+          destination through alternative routes. However, setting up and managing a mesh network can be complex and
+          costly due to the numerous connections required.
+          <!-- -- p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="third" />
+      <label for="third">Network Devices</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+
+          Network devices are like the tools and equipment used to build and manage communication highways for data to
+          travel between computers and other devices. Here's a human-friendly explanation of some common network
+          devices:
+          <hr>
+          <br>
+          <b>Router:</b>
+
+          Imagine a traffic cop directing cars on different roads. A router directs data traffic between different
+          networks, like the internet and your home network. It helps data packets find the best path to their
+          destination.
+          <hr>
+          <br>
+          <b>Switch:</b>
+
+          Think of a switchboard operator connecting calls to the right phone numbers. A switch connects devices within
+          the same network, like computers in an office. It directs data packets to the specific device they're intended
+          for.
+          <hr>
+          <br>
+          <b>Hub:</b>
+
+          Picture a central hub distributing mail to different mailboxes. A hub is like a simple device that connects
+          multiple devices in a network. It receives data from one device and sends it to all other devices connected to
+          it, regardless of whether they need it or not.
+          <hr>
+          <br>
+          <b>Modem:</b>
+
+          Imagine a translator converting a message from one language to another. A modem converts digital data from
+          your computer into signals that can travel over communication lines, like phone lines or cable lines, and vice
+          versa.
+          <hr><br>
+          <b>Access Point:</b>
+
+          Think of a Wi-Fi hotspot providing wireless internet access in a specific area. An access point allows
+          wireless devices, like smartphones and laptops, to connect to a wired network, such as your home internet
+          connection.
+          <hr><br>
+          <b>Network Interface Card (NIC):</b>
+          Picture a passport that identifies you as a citizen of a country. A NIC is like a card installed in a computer
+          or device that allows it to connect to a network. It provides a unique address called a MAC address and
+          enables communication with other devices on the network.
+          <hr><br>
+          <span style="color: blue;">
+            These devices work together to create and manage networks, allowing data to flow smoothly between computers,
+            printers, servers, and other devices, both within your local environment and across the internet.
+          </span>
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="six" />
+      <label for="six">HUB vs SWITCH vs ROUTER vs MODEM</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          <b>Router:</b> Think of a router as a traffic cop for data. It directs internet traffic to the right places
+          and can connect multiple networks together, like your home network to the internet.
+          <hr><br>
+
+          <b>Switch:</b> A switch is like a train switchyard where data packets are the trains. It connects devices
+          within a single network and makes sure the data packets reach the right device by checking their “addresses”.
+
+          <hr><br>
+          <b>Hub:</b> A hub is like a town square where everyone hears everything. It connects devices in a network too,
+          but it’s not smart like a switch. It sends incoming data to all connected devices, not just the one it’s meant
+          for.
+
+          <hr><br>
+
+          <b>Modem:</b> A modem is like a translator. It converts the internet signal from your service provider, which
+          is in a format suitable for transmission, into a digital format that your devices can understand, and vice
+          versa.
+          <hr><br>
+
+          <span style="color: blue;">
+            In essence, routers manage traffic between networks, switches manage traffic within a network, hubs are
+            simple connection points with no traffic management, and modems translate signals between your network and
+            your internet service provider.
+          </span>
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="sixty" />
+      <label for="sixty">Network Protocols</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          Network protocols are like the rules of a game that all players agree to follow. They make sure that devices
+          on a network, like computers and phones, can talk to each other smoothly and understand what the other is
+          saying. It’s like having a common language so everyone knows what to do when they receive data, send data, or
+          need to make sure the data is safe and reaches the right place.
+
+          <hr>
+          <br>
+          <b>TCP/IP (Transmission Control Protocol/Internet Protocol):</b> This is like the main highway of the
+          internet. TCP is responsible for making sure messages get from one computer to another without getting mixed
+          up, while IP is like the postal service that delivers the messages to the right address.
+
+
+          <hr>
+          <br>
+          <b>UDP (User Datagram Protocol):</b> Think of UDP as sending a postcard instead of a letter. It’s faster
+          because there’s no need to check if the postcard arrived; it just gets sent out hoping for the best.
+
+          <hr>
+          <br>
+
+          <b>HTTP (Hypertext Transfer Protocol):</b> This protocol is like a waiter at a restaurant. When you order a
+          web page, HTTP takes your order, brings it to the web server, and then delivers the web page back to you.
+
+          <hr>
+          <br>
+
+          <b>FTP (File Transfer Protocol):</b> FTP is like a delivery truck for moving large files. It’s used when you
+          need to transfer big files from one place to another over the internet.
+
+          <hr>
+          <br>
+
+          <b>DNS (Domain Name System):</b> DNS is like a phone book for the internet. Instead of remembering a
+          complicated IP address, you can just type in a website name, and DNS finds the right number for you.
+          These protocols work together to make sure that when you want to send a message or get information from the
+          internet, everything goes to the right place and in the right order
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="sixtx" />
+      <label for="sixtx">IP Addressing</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          An IP address is like a home address for your computer on the internet or a local network. It’s a unique set
+          of numbers that identifies your device so it can send and receive information.
+
+          <hr><br>
+          There are two main types of IP addressing schemes:
+
+          <br>
+          <b>IPv4:</b> This is the older version, which uses 32 bits to create the address. It looks like four sets of
+          numbers separated by dots, for example, 192.168.1.1. Each set can range from 0 to 255. However, because there
+          are so many devices nowadays, IPv4 addresses are running out.
+          <hr>
+          <br>
+
+          <b>IPv6:</b> This is the newer version, which uses 128 bits, allowing for a much larger number of unique
+          addresses. It’s written with eight groups of hexadecimal numbers (which include numbers and letters),
+          separated by colons, like this: 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+          <hr><br>
+          The structure of an IP address includes:
+          <br>
+          <b>Network part:</b> This tells us which network the device belongs to. <br>
+          <b>Host part:</b> This identifies the specific device within the network. <br>
+          Subnetting is like dividing a large neighborhood into smaller blocks to better manage traffic and ensure
+          everyone has a unique address. It allows a network to be divided into smaller, more efficient sub-networks,
+          which can improve performance and security.
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="lastx" />
+      <label for="lastx">Networking Models</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          Networking models are like blueprints that show how data should travel over a network. They help different
+          computer systems to communicate with each other by providing a set of rules and standards.
+          <b>1.</b>
+          Let’s look at two main models: <br>
+
+          <b>OSI (Open Systems Interconnection) Model:</b>
+          <br>
+          It’s like a team of specialists, where each member (or layer) has a specific job. <br>
+          There are 7 layers1: <br>
+          <b>Physical Layer:</b> Deals with the physical connection between devices (like cables and switches). <br>
+          <b>Data Link Layer:</b> Makes sure data is transferred correctly between devices on the same network. <br>
+          <b>Network Layer:</b> Handles the movement of data between different networks. <br>
+          <b>Transport Layer:</b> Ensures data is transferred reliably and without errors. <br>
+          <b>Session Layer:</b> Manages the conversations between computers. <br>
+          <b>Presentation Layer:</b> Translates data between the network and the application. <br>
+          <b>Application Layer:</b> The one you interact with, like your web browser or email client.
+          <hr><br>
+          <b>2.</b>
+          TCP/IP Model: <br>
+          This model is more streamlined and is the basis for the internet.
+          It has 4 layers2: <br>
+          <b>Application Layer:</b> Where applications accessing the network reside. <br>
+          <b>Transport Layer:</b> Similar to OSI’s, it manages data transfer with protocols like TCP and UDP. <br>
+          <b>Internet Layer:</b> Equivalent to OSI’s Network Layer, it deals with data packet routing. <br>
+          <b>Network Interface Layer:</b> Combines OSI’s Physical and Data Link Layers, handling the physical
+          transmission of data. <br>
+          <hr>
+          Both models are essential for understanding how networks operate, ensuring different devices and programs can
+          communicate effectively.
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="lasstx" />
+      <label for="lasstx">Data Transmission</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          Data transmission mode is like the way data travels from one device to another. Imagine it as a road where
+          data are vehicles traveling from point A to point B. There are different “lanes” or modes for these vehicles:
+          <hr>
+          <br>
+          <b>Simplex:</b> This is a one-way street. Data can only travel in one direction. Like a keyboard sending data
+          to your computer. <br>
+          <b>Half-Duplex:</b> This is like a one-lane bridge where cars can go both ways, but not at the same time.
+          Walkie-talkies work this way. <br>
+          <b>Full-Duplex:</b> This is a two-lane road where data can go both ways simultaneously, like a phone call.
+          <hr>
+          <br>
+          Now, let’s talk about the concepts related to data transmission:
+          <br>
+          <b>Bandwidth:</b> This is like the width of the road. The wider it is, the more cars (data) can travel side by
+          side at the same time. <br>
+          <b>Latency:</b> This is the time it takes for a car (data packet) to get from the start to the destination.
+          Lower latency means a faster trip. <br>
+          <b>Throughput:</b> This is how many cars (data packets) actually make it to the destination in a given time.
+          It’s like the rate of successful deliveries. <br>
+          <b>Data Rates:</b> This is the speed limit on the road. It tells you how fast the cars (data packets) can go.
+          <hr>
+          <br>
+          And about the transmission media:
+          <br>
+          <b>Wired (Ethernet, Fiber Optics):</b> These are like physical roads made of cables that data travels on.
+          Ethernet is like a standard road, while fiber optics is a high-speed freeway. <br>
+          <b>Wireless (Wi-Fi, Bluetooth):</b> This is like using drones to send packages through the air. Wi-Fi covers
+          larger areas like a city, and Bluetooth is for short distances like from your phone to your headphones.
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="laastx" />
+      <label for="laastx">Network Security</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          Network security is like having a strong, secure door to your house. It keeps your network safe from intruders
+          who might want to steal or damage your digital “belongings”. Here’s a simple breakdown of some key concepts:
+          <br>
+          <b>Authentication:</b> It’s like a bouncer checking IDs before letting people into a club. It makes sure only
+          the right people can access your network.
+
+          <br>
+          <b>Encryption:</b> This is like sending secret messages. It scrambles data so that only someone with the right
+          “decoder” can understand it.
+          <br>
+          Firewalls: Think of a firewall as a fence around your property. It helps block unwanted visitors from getting
+          in.
+          <br>
+          <b>VPNs (Virtual Private Networks):</b> A VPN is like a secure tunnel that lets you access the internet
+          privately, even when you’re on a public network. <br>
+          <b>Intrusion Detection/Prevention Systems (IDS/IPS):</b> These are like security cameras and alarms. They
+          watch for suspicious activity and can take action to stop it. <br>
+          <hr><br>
+          As for security threats, they’re like different ways burglars might try to get into your house. Some common
+          ones include:
+          <br>
+          <b>Malware:</b> Malicious software that can damage your system or steal your data.
+          <br>
+          <b>Phishing:</b> Scams that trick you into giving away sensitive information.
+          <br>
+          <b>Ransomware: </b>Software that locks you out of your system until you pay a ransom.
+          <br>
+          <b>DDoS Attacks:</b> Overwhelming your network with traffic to shut it down.
+          <hr><br>
+          <span style="color: blue;">
+            To keep your network safe, you can use antivirus software, be careful about what links you click on, keep
+            your software updated, and educate yourself and others about these threats.
+          </span>
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="laasstx" />
+      <label for="laasstx">Network Troubleshooting</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          Network troubleshooting is like being a detective for computer networks. When something goes wrong, like your internet is slow or a website won’t load, network troubleshooting helps you figure out the problem and fix it. <br>
+<hr>
+<br>
+          Here’s a simple way to understand it: <br>
+          
+          <b>Identify the Problem:</b> Like noticing something is missing from your room. <br>
+          <b>Develop a Theory:</b> Guessing where you might have left it. <br>
+          <b>Test the Theory:</b> Looking in those places. <br>
+          <b>Plan of Action:</b> Deciding what to do once you find it or don’t. <br>
+          <b>Implement the Solution:</b> Putting things back in order. <br>
+          <b>Verify System Functionality:</b> Making sure everything is working again. <br>
+          <b>Document the Issue:</b> Writing down what went wrong and how you fixed it1. <br>
+          <hr>
+          <br>
+          And about the tools, think of them as gadgets that help you solve the network mystery:
+           <br>
+          <b>Ping:</b> It’s like shouting in a canyon and waiting for an echo. It tells you if another computer is reachable and how long it takes to get a response. <br>
+          <b>Traceroute:</b> This tool shows you the path your data takes to reach its destination, like tracking a package’s journey. <br>
+          <b>Ipconfig/Ifconfig:</b> These are like looking at your house’s blueprint to see your address and other details about your network. <br>
+          <b>Wireshark:</b> It’s like a security camera for network traffic. It lets you see all the data coming in and out of your network in detail2.
+          <br>
+<hr><br>
+          <span style="color: blue;">
+            By learning network troubleshooting, you become the go-to person for fixing network issues, ensuring everything runs smoothly.
+          </span>
+
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <br><br><br><br>
+</body>
+
+</html>
